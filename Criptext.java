@@ -20,6 +20,7 @@ public class Criptext extends JFrame {
     String ruta;
 
     public Criptext() {
+        super("Criptext");
         ruta = System.getProperty("user.dir");
         f = new File(ruta + "\\mensajedsc.txt");
         fc = new File(ruta + "\\mensajec.vge");
@@ -35,10 +36,11 @@ public class Criptext extends JFrame {
         dc = new JTextArea("Texto descifrado");
         setSize(750, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        show(true);
+        setVisible(true);
         atributos();
         armado();
         escuchas();
+        repaint();
     }
 
     public void armado() {
